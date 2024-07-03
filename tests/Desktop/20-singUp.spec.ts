@@ -6,9 +6,9 @@ import dotenv from 'dotenv'
 import { resolve } from 'path'
 
 const name = 'Тест'
-//const nameInvalid = 'абвгґдеєжзиіїйклмнопрстуфхцчшщьюяабвгґдеєжзиіопараа'
+const nameInvalid = 'абвгґдеєжзиіїйклмнопрстуфхцчшщьюяабвгґдеєжзиіопараа'
 const surname = 'Тест'
-//const surnameInalid = '@@@@123$#'
+const surnameInalid = '@@@@123$#'
 const email: string = randomEmail()
 const emailInvalid = 'test.gmail.com'
 const emailExist = 'test@gmail.com'
@@ -205,7 +205,7 @@ test.fixme('Sing Up with empty name', async ({ page }) => {
 })
 
 // Перевіряємо поле 'Ім'я' (51 символ)
-/*test('Sing Up invalid name - 51 symbols', async ({ page }) => {
+test('Sing Up invalid name - 51 symbols', async ({ page }) => {
     await page.goto('/');
     await page.getByRole('link', { name: 'Приєднатись' }).click();
     await expect(page).toHaveURL(/register/);
@@ -230,7 +230,7 @@ test.fixme('Sing Up with empty name', async ({ page }) => {
     await expect(ariaName).toEqual('true'); 
     await page.getByText('Ім\'я обов\'язкове').isVisible();  
 });
-*/
+
 
 // Перевіряємо поле 'Прізвище' (пусте)
 test.fixme('Sing Up with empty surname', async ({ page }) => {
@@ -267,7 +267,7 @@ test.fixme('Sing Up with empty surname', async ({ page }) => {
 })
 
 // Перевіряємо поле 'Прізвище' (спец.символи)
-/*test('Sing Up with invalid surname - spesial symbols', async ({ page }) => {
+test('Sing Up with invalid surname - spesial symbols', async ({ page }) => {
     await page.goto('/');
     await page.getByRole('link', { name: 'Приєднатись' }).click();
     await expect(page).toHaveURL(/register/);
@@ -296,7 +296,7 @@ test.fixme('Sing Up with empty surname', async ({ page }) => {
     const ariaSurname = await page.locator('input[placeholder="Прізвищe"]').getAttribute('aria-invalid');
     await expect(ariaSurname).toEqual('true');
     await page.getByText('Прізвищe обов\'язкове').isVisible();  
-});*/
+});
 
 // Перевіряємо поле 'Емаіл' (пусте)
 test.fixme('Sing Up with empty email', async ({ page }) => {
