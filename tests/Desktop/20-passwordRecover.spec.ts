@@ -2,8 +2,6 @@ import { Recover } from '../POM/passwordRecover'
 
 import test, { expect } from '@playwright/test'
 
-// import { expect, test } from '@playwright/test'
-
 test('Recover password with valid data', async ({ page }) => {
 	const recover = new Recover(page)
 
